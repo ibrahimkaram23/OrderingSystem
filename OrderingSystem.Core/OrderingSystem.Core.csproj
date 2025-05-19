@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFrameworkCore.JamieEncryptColumn" Version="8.0.69" />
+    <PackageReference Include="FluentValidation" Version="11.10.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.10.0" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="9.0.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\SharedResources.En.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SharedResources.En.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\SharedResources.En.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedResources.En.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Authentication\Command\Results\" />
+    <Folder Include="Features\Categories\Queries\Validators\" />
+    <Folder Include="Features\Customers\Commands\" />
+    <Folder Include="Features\Emails\Commands\Handlers\" />
+    <Folder Include="Features\Emails\Queries\" />
+    <Folder Include="Mapping\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrderingSystem.Data\OrderingSystem.Data.csproj" />
+    <ProjectReference Include="..\OrderingSystem.infrastructure\OrderingSystem.infrastructure.csproj" />
+    <ProjectReference Include="..\OrderingSystem.Service\OrderingSystem.Service.csproj" />
+    <ProjectReference Include="..\OrderingSystem.Shared\OrderingSystem.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
