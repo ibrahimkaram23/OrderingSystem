@@ -62,8 +62,9 @@ namespace OrderingSystem.Core.Resources
         public const string NoImage = "NoImage";
         public const string FailedToUploadImage = "FailedToUploadImage";
         public const string EditFailed = "EditFailed";
-    
-
-
+        public const string FaildToAddOrder = "FaildToAddOrder";
+        public const string InsufficientStock = "InsufficientStock";
+        public const string ProductNotFound = "ProductNotFound";
+        public const string OrderCreatedSuccessfully = "OrderCreatedSuccessfully";
     }
 }

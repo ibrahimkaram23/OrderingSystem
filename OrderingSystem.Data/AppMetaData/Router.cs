@@ -69,6 +69,16 @@ namespace OrderingSystem.Data.AppMetaData
             public const string Create = Prefix + "/Create";
 
         }
+        public static class OrdersRoute {
+            public const string Prefix = Rule + "Orders";
+            public const string GetOrders = Prefix + "/GetAll";
+            public const string GetByID = Prefix + singleRoute;
+            public const string Create = Prefix + "/Create";
+            public const string Edit = Prefix + "/Edit";
+            public const string Delete = Prefix + singleRoute;
+            public const string EditStatus = Prefix + "/EditStatus";
+
+        }
         public static class CategoriesRoute
         {
             public const string Prefix = Rule + "Categories";
